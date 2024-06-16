@@ -1,4 +1,22 @@
+const getUsersWithFriend = (users, friendName) => {
+  const searchUserFriend = users.filter(user => user.friends.includes(friendName))
+  return searchUserFriend
+}
 
+
+
+
+// Напиши стрілочну функцію getUsersWithFriend(users, friendName) , яка прийматиме два параметра:
+
+// перший параметр users — масив обєктів користувачів
+// другий параметр friendName — імя друга для пошуку.
+// Функція має повертати масив усіх користувачів із масиву users, у яких є друг з іменем friendName. Друзі кожного користувача зберігаються у властивості friends. Якщо користувачів, у яких є такий других немає, то функція має повернути порожній масив.
+
+// Поради:
+
+// Метод filter() можна використовувати для створення нового масиву з елементами, які задовольняють певну умову.
+// Використовуй метод includes() для перевірки, чи масив friends містить friendName.
+// Візьми код нижче і встав після оголошення своєї функції для перевірки коректності її роботи. У консоль будуть виведені результати її роботи.
 
 
 
@@ -33,7 +51,7 @@ const allUsers = [
   }
 ];
 
-console.log(getUsersWithFriend(allUsers, "Briana Decker")); 
+console.log(getUsersWithFriend(allUsers, "Briana Decker"));
 // [
 //   {
 //     name: "Sharlene Bush",
@@ -57,17 +75,4 @@ console.log(getUsersWithFriend(allUsers, "Goldie Gentry"));
 //   }
 // ]
 
-console.log(getUsersWithFriend(allUsers, "Adrian Cross" )); // []
-
-
-// Напиши стрілочну функцію getUsersWithFriend(users, friendName) , яка прийматиме два параметра:
-
-// перший параметр users — масив об’єктів користувачів
-// другий параметр friendName — ім’я друга для пошуку.
-// Функція має повертати масив усіх користувачів із масиву users, у яких є друг з іменем friendName. Друзі кожного користувача зберігаються у властивості friends. Якщо користувачів, у яких є такий других немає, то функція має повернути порожній масив.
-
-// Поради:
-
-// Метод filter() можна використовувати для створення нового масиву з елементами, які задовольняють певну умову.
-// Використовуй метод includes() для перевірки, чи масив friends містить friendName.
-// Візьми код нижче і встав після оголошення своєї функції для перевірки коректності її роботи. У консоль будуть виведені результати її роботи.
+console.log(getUsersWithFriend(allUsers, "Adrian Cross")); // []
